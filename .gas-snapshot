@@ -1,2 +1,2 @@
-SampleContractTest:testFunc1() (gas: 534472)
-SampleContractTest:testFunc2() (gas: 534440)
+EncoderTest:testEncoder() (gas: 12646)
+MsgSenderPatterns:testGas() (gas: 21153)
