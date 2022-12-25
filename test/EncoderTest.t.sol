@@ -2,7 +2,7 @@
 pragma solidity 0.8.15;
 
 import {Test} from "forge-std/Test.sol";
-import {console} from "forge-std/console.sol";
+import {console2} from "forge-std/console2.sol";
 
 import {Encoder} from "../src/Encoder.sol";
 
@@ -14,8 +14,10 @@ contract EncoderTest is Test {
     }
 
     function testEncoder() external {
-        bytes memory encodedMessage = encoderContract.encode(100, 200, 300);
+        bytes memory encodedMessagePacked = encoderContract.encodePacked(100, 200, false);
+        console2.logBytes(encodedMessagePacked);
 
-        console.logBytes(encodedMessage);
+        bytes memory encodedMessage = encoderContract.encode(100, 200, false);
+        console2.logBytes(encodedMessage);
     }
 }

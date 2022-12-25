@@ -18,9 +18,7 @@ contract Contract {
 
         // purchase
         // IWritingEditions(editionsCloneAddress).purchase{value: 0.01 ether}(address(this), "love");
-        bytes memory encodedMessage = Encoder.encode(100, 200, 300);
-
-        console.logString();
+        bytes memory encodedMessage = encoder.encode(100, 200, true);
     }
 
     receive() external payable {}
