@@ -1,6 +1,8 @@
-# foundry-template • [![CI](https://github.com/transmissions11/foundry-template/actions/workflows/tests.yml/badge.svg)](https://github.com/transmissions11/foundry-template/actions/workflows/tests.yml)
+# Protocol Playground• [![CI](https://github.com/transmissions11/foundry-template/actions/workflows/tests.yml/badge.svg)](https://github.com/transmissions11/foundry-template/actions/workflows/tests.yml)
 
-Streamlined template for getting started with Foundry and Solmate.
+Playground exploring solidity patterns, gas optimizations and compilations of notes.
+
+Doing this for fun, but also to build a personal resource, and share it with others.
 
 ## Contributing
 
@@ -18,6 +20,9 @@ forge install
 
 ```sh
 forge test
+
+# Run a specific test
+forge test --match-contract "ContractName"
 ```
 
 ### Update Gas Snapshots
@@ -25,3 +30,7 @@ forge test
 ```sh
 forge snapshot
 ```
+
+### Notes
+
+1. [State Variable Notes](./notes/state-variable.md)

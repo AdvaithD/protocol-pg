@@ -14,4 +14,5 @@ abi.encodePacked output:
 
 Going back to variables from bytes (uint256, uint256, bool)
 
-Lets take the packed data
+Lets take the normal (unpacked) data:
+
