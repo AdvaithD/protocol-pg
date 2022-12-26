@@ -25,7 +25,7 @@ define create_svg
 	tail -1 $(1)
 endef
 
-svg:; forge run src/scripts/Contract.sol -vvv > token.svg && $(call create_svg, "token.svg")
+script:; forge run src/scripts/Contract.sol -vvv
 
 # Deployments
 deploy-contract:; 
@@ -58,3 +58,5 @@ verify-contract-no-args:;
 	$(address) \
 	$(contract) \
 	$(apiKey) 
+
+repl: chisel
