@@ -3,4 +3,21 @@ pragma solidity 0.8.15;
 
 import "forge-std/Test.sol";
 
-contract TestEnvironment is Test {}
+import {EIP1167Factory} from "../src/patterns/EIP1167Factory.sol";
+
+contract TestEnvironment is Test {
+    EIP1167Factory public cloneFactory;
+    uint256 public constant privateKey = 11111111111;
+
+    /// @notice deployer nonce (test setup deplyoer)
+    uint256 public nonce;
+
+    /// @notice stand in owner for all contracts (address(this.))
+    address public owner;
+
+    constructor() {
+        owner = vm.addr(privateKey);
+
+        cloneFactory = new EIP1167Factory();
+    }
+}
