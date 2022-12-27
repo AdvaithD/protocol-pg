@@ -4,6 +4,11 @@ Playground exploring solidity patterns, gas optimizations and compilations of no
 
 Doing this for fun, but also to build a personal resource, and share it with others.
 
+### Notes
+
+1. [State Variable Notes](./notes/state-variable.md)
+2. [Gas benchmark of EIP1167 Clones vs. Clones with immutable Args](./notes/clones-benchmark.md)
+
 ## Contributing
 
 You will need a copy of [Foundry](https://github.com/foundry-rs/foundry) installed before proceeding. See the [installation guide](https://github.com/foundry-rs/foundry#installation) for details.
@@ -53,6 +58,3 @@ Type: dynamic bytes
 └─ Contents ([0x40:..]): 0x000000000000000000000000000000000000000000000000000000000000006400000000000000000000000000000000000000000000000000000000000000640000000000000000000000000000000000000000000000000000000000000064
 ```
 
-### Notes
-
-1. [State Variable Notes](./notes/state-variable.md)
