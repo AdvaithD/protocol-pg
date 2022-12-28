@@ -1,9 +1,9 @@
 /// SPDX-License-Identifier: MIT
-pragma solidity 0.8.0;
+pragma solidity 0.8.15;
 
-import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
-import "@openzeppelin/contracts/utils/cryptography/draft-EIP712.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "openzeppelin-contracts/utils/cryptography/ECDSA.sol";
+import "openzeppelin-contracts/utils/cryptography/draft-EIP712.sol";
+import "openzeppelin-contracts/security/ReentrancyGuard.sol";
 
 contract MinimalMultisig is EIP712, ReentrancyGuard {
     using ECDSA for bytes32;
@@ -78,7 +78,7 @@ contract MinimalMultisig is EIP712, ReentrancyGuard {
         emit NewSigner(_signer, _threshold);
     }
 
-    /// @notice- Execute a multisig transaction given an array of signatures, and TxnRequest params
+    /// @notice - Execute a multisig transaction given an array of signatures, and TxnRequest params
     /// @param signatures - array of signatures from multisig holders
     /// @param _to - address a transaction should be sent to
     /// @param _value - transaction value

@@ -4,6 +4,7 @@ pragma solidity 0.8.15;
 import {console2} from "forge-std/console2.sol";
 import "../../src/patterns/immutable-args/CloneWithImmutableArgs.sol";
 import "../TestEnvironment.sol";
+import "../mocks/MockERC20.sol";
 
 contract ClonesTest is TestEnvironment {
     function setUp() public {}
@@ -16,5 +17,16 @@ contract ClonesTest is TestEnvironment {
 
     function testGas_cloneWithImmutableArgs() external {
         Clone clone = immutableArgsCloneFactory.createClone(address(1), 1, 2);
+    }
+
+    function testCreate3DeployCosts() external {
+        /// @notice trying to use the clone's creation code. Should switch to ERC20 soon
+        bytes32 salt = keccak256(bytes("A salt!"));
+
+        MockERC20 deployed = MockERC20(
+            create3Factory.deploy(
+                salt, abi.encodePacked(type(MockERC20).creationCode, abi.encode("Mock Token", "MOCK", 18))
+            )
+        );
     }
 }

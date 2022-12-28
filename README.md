@@ -9,6 +9,7 @@ Doing this for fun, but also to build a personal resource, and share it with oth
 1. [State Variable Notes](./notes/state-variable.md)
 2. [Gas benchmark of EIP1167 Clones vs. Clones with immutable Args](./notes/clones-benchmark.md)
 3. [Basic Gas Optimizations](./notes/basic-gas-optimizations.md)
+4. [CREATE3 Factory (WIP)](./notes/CREATE3.md)
 
 ### Contracts
 1. [EIP1167 Clones](./src/patterns/EIP1167Factory.sol)
@@ -17,6 +18,7 @@ Doing this for fun, but also to build a personal resource, and share it with oth
 4. [Minimal Multisig with EIP712](./src/minimal-multisig/MinimalMultisig.sol)
 5. [Utility Contract for Type Conversions (for solidity tests etc)](./src/utils/TypeConverts.sol)
 6. [Generic User - Use in tests to execute virtually any operation as a user](./src/utils/GenericUser.sol)
+7. [Create3 Factory](./src/patterns/create3/Create3Factory.sol)
 
 ## Contributing
 
