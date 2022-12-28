@@ -1,9 +1,9 @@
 /// SPDX-License-Identifier: MIT
-pragma solidity 0.8.0;
+pragma solidity 0.8.15;
 
-import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
-import "@openzeppelin/contracts/utils/cryptography/draft-EIP712.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "openzeppelin-contracts/utils/cryptography/ECDSA.sol";
+import "openzeppelin-contracts/utils/cryptography/draft-EIP712.sol";
+import "openzeppelin-contracts/security/ReentrancyGuard.sol";
 
 contract MinimalMultisig is EIP712, ReentrancyGuard {
     using ECDSA for bytes32;
