@@ -78,7 +78,7 @@ contract MinimalMultisig is EIP712, ReentrancyGuard {
         emit NewSigner(_signer, _threshold);
     }
 
-    /// @notice- Execute a multisig transaction given an array of signatures, and TxnRequest params
+    /// @notice - Execute a multisig transaction given an array of signatures, and TxnRequest params
     /// @param signatures - array of signatures from multisig holders
     /// @param _to - address a transaction should be sent to
     /// @param _value - transaction value

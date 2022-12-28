@@ -17,6 +17,7 @@ Doing this for fun, but also to build a personal resource, and share it with oth
 4. [Minimal Multisig with EIP712](./src/minimal-multisig/MinimalMultisig.sol)
 5. [Utility Contract for Type Conversions (for solidity tests etc)](./src/utils/TypeConverts.sol)
 6. [Generic User - Use in tests to execute virtually any operation as a user](./src/utils/GenericUser.sol)
+7. [Create3 Factory](./src/patterns/create3/Create3Factory.sol)
 
 ## Contributing
 
