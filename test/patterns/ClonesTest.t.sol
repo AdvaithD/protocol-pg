@@ -23,6 +23,10 @@ contract ClonesTest is TestEnvironment {
         /// @notice trying to use the clone's creation code. Should switch to ERC20 soon
         bytes32 salt = keccak256(bytes("A salt!"));
 
-        MockERC20 deployed = MockERC20(create3Factory.deploy(salt, abi.encodePacked(type(MockERC20).creationCode)));
+        MockERC20 deployed = MockERC20(
+            create3Factory.deploy(
+                salt, abi.encodePacked(type(MockERC20).creationCode, abi.encode("Mock Token", "MOCK", 18))
+            )
+        );
     }
 }
