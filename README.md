@@ -10,6 +10,14 @@ Doing this for fun, but also to build a personal resource, and share it with oth
 2. [Gas benchmark of EIP1167 Clones vs. Clones with immutable Args](./notes/clones-benchmark.md)
 3. [Basic Gas Optimizations](./notes/basic-gas-optimizations.md)
 
+### Contracts
+1. [EIP1167 Clones](./src/patterns/EIP1167Factory.sol)
+2. [Clones with Immutable Args](./src/patterns/immutable-args/)
+3. [ERC721 Merkle Drop](./src/erc721-merkle-drop/ERC721MerkleDrop.sol)
+4. [Minimal Multisig with EIP712](./src/minimal-multisig/MinimalMultisig.sol)
+5. [Utility Contract for Type Conversions (for solidity tests etc)](./src/utils/TypeConverts.sol)
+6. [Generic User - Use in tests to execute virtually any operation as a user](./src/utils/GenericUser.sol)
+
 ## Contributing
 
 You will need a copy of [Foundry](https://github.com/foundry-rs/foundry) installed before proceeding. See the [installation guide](https://github.com/foundry-rs/foundry#installation) for details.
