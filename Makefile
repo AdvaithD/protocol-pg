@@ -60,3 +60,9 @@ verify-contract-no-args:;
 	$(apiKey) 
 
 repl: chisel
+
+docker-build:;
+	docker build -t protocol-pg:latest --no-cache --progress=plain .
+
+docker-run:;
+	docker run protocol-pg:latest
