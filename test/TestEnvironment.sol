@@ -7,6 +7,7 @@ import {EIP1167Factory} from "../src/patterns/EIP1167Factory.sol";
 import {ImmutableArgsCloneFactory} from "../src/patterns/immutable-args/ImmutableArgsCloneFactory.sol";
 import {ImmutableArgsCloneFactory} from "../src/patterns/immutable-args/ImmutableArgsCloneFactory.sol";
 import {Create3Factory} from "../src/patterns/create3/Create3Factory.sol";
+import {Registry} from "../src/registry/Registry.sol";
 
 contract TestEnvironment is Test {
     /// @notice EIP1167 factory
@@ -17,6 +18,9 @@ contract TestEnvironment is Test {
 
     /// @notice Create3Factory
     Create3Factory public create3Factory;
+
+    /// @notice vanilla registry
+    Registry public registry;
 
     uint256 public constant privateKey = 11111111111;
 
@@ -34,5 +38,7 @@ contract TestEnvironment is Test {
         immutableArgsCloneFactory = new ImmutableArgsCloneFactory();
 
         create3Factory = new Create3Factory(address(this));
+
+        registry = new Registry(owner);
     }
 }
